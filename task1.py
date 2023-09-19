@@ -15,10 +15,17 @@ def replaceDog(input):
     return
     str - the modified string
     '''
-    modifiedString = input
+    modifiedString = input.split(" ")
+    for i in modifiedString:
+        if i == "dog":
+            d = modifiedString.index(i)
+            modifiedString.remove("dog")
+            modifiedString.insert(d,"kitty")
+    modifiedString = " ".join(modifiedString)
 
+    print(modifiedString)
     return modifiedString
-
+    
 
 if __name__ == "__main__":
     '''
